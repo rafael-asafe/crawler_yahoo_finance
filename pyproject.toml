@@ -1,0 +1,37 @@
+[project]
+name = "crawler-yahoo-finance"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "BRunknown",email = "asafe.ferr@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "selenium (>=4.41.0,<5.0.0)",
+    "beautifulsoup4 (>=4.14.3,<5.0.0)",
+    "pydantic-settings (>=2.13.1,<3.0.0)",
+    "pydantic (>=2.12.5,<3.0.0)",
+    "tenacity (>=9.0.0,<10.0.0)"
+]
+
+[tool.poetry]
+package-mode = false
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[dependency-groups]
+dev = [
+    "httpx (>=0.28.1,<0.29.0)",
+    "pytest (>=8.0.0,<9.0.0)",
+    "factory-boy (>=3.3.0,<4.0.0)",
+    "faker (>=37.0.0,<38.0.0)",
+    "pytest-cov (>=6.0.0,<7.0.0)"
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["test"]
+addopts = "--cov=src --cov-report=term-missing"
