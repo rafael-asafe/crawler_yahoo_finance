@@ -116,10 +116,11 @@ test/
 ### Armazenamento
 - **Saída em Parquet** — melhora o consumo das informacoes.
 
+
 ### Execução
 - **Execução paralela de páginas** — coletar múltiplas páginas concorrentemente com `asyncio` + Selenium Grid ou Playwright para reduzir o tempo total de extração.
 
 ### Observabilidade
 - **Métricas de execução** — registrar no log o número de equities coletadas, páginas processadas, erros de parsing e tempo total de execução.
-- **Monitoramento** — Acompanhar o números de falhas no proceso, notifica em caso de qualidade de resultado muito abaixo do esperado 
+- **Monitoramento** — acompanhar o número de falhas no processo e notificar quando a qualidade do resultado estiver abaixo do esperado.
 
